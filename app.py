@@ -19,11 +19,11 @@ def flaskapp():
 def flaskapp_home():
     return render_template("fannie-mae-viewer.html")
 
-@app.route("/riskanalyzer")
+@app.route("/fannie-mae-viewer/riskanalyzer")
 def riskanalyzer():
     return redirect('/dash_risk_calc')
 
-@app.route("/exploration")
+@app.route("/fannie-mae-viewer/exploration")
 def exploration():
     return render_template("data-viz-exploration.html")
 		
