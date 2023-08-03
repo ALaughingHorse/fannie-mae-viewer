@@ -15,6 +15,10 @@ def render_dashboard():
 def flaskapp():
     return render_template("fannie-mae-viewer.html")
 
+@app.route("/fannie-mae-viewer/")
+def flaskapp_home():
+    return render_template("fannie-mae-viewer.html")
+
 @app.route("/riskanalyzer")
 def riskanalyzer():
     return redirect('/dash_risk_calc')
