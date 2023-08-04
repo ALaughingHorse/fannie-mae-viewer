@@ -4,7 +4,7 @@
     <title>Fannie Mae Viewer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="../static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
@@ -54,7 +54,7 @@
     <div class="altair" id="ltv"></div>
 
     <script type="text/javascript">
-      var spec = "/fannie-mae-viewer/static/vega_ltv.json";
+      var spec = "../static/vega_ltv.json";
       vegaEmbed('#ltv', spec, {"actions": false}).then(function(result) {
     }).catch(console.error);
     </script>
@@ -65,7 +65,7 @@
     <div class="altair" id="fico"></div>
 
     <script type="text/javascript">
-      var spec = "/fannie-mae-viewer/static/vega_fico.json";
+      var spec = "../static/vega_fico.json";
       vegaEmbed('#fico', spec, {"actions": false}).then(function(result) {
     }).catch(console.error);
     </script>
@@ -76,7 +76,7 @@
     <div class="altair" id="dti"></div>
 
     <script type="text/javascript">
-      var spec = "/fannie-mae-viewer/static/vega_dti.json";
+      var spec = "../static/vega_dti.json";
       vegaEmbed('#dti', spec, {"actions": false}).then(function(result) {
     }).catch(console.error);
     </script>
@@ -87,7 +87,7 @@
     <div class="altair" id="borrowers_scatter"></div>
 
     <script type="text/javascript">
-      var spec = "/fannie-mae-viewer/static/delinquency_num_borrowers.json";
+      var spec = "../static/delinquency_num_borrowers.json";
       vegaEmbed('#borrowers_scatter', spec, {"actions": false}).then(function(result) {
     }).catch(console.error);
     </script>
@@ -109,7 +109,7 @@
     <div class="altair" id="refi"></div>
 
     <script type="text/javascript">
-      var spec = "/fannie-mae-viewer/static/refinance.json";
+      var spec = "../static/refinance.json";
       vegaEmbed('#refi', spec, {"actions": false}).then(function(result) {
     }).catch(console.error);
     </script>
