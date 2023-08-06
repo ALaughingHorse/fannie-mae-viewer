@@ -120,6 +120,8 @@ a.explore:hover {
 }
 .content {
     position: relative;
+    margin: auto;
+    /* max-width: 800px; */
 }
 .content-left {
     position: relative;
@@ -302,3 +304,23 @@ input:hover[type="submit"]{
 .row .footer-inner{
     padding: 0px 0px 22px 0px;
 }
+
+.grid-container-three {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 20px;
+    /* background-color: #48b0e1; */
+    padding: 10px;
+    /* margin: 0 auto; */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  }
+
+.grid-container-two {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+    /* background-color: #48b0e1; */
+    padding: 10px;
+    /* margin: 0 auto; */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  }

@@ -40,59 +40,73 @@
     <div class="banner">
         <div class="container">
             <div class="content">
-                <div class="content-left" id="home">
+                <div class="content" id="home">
                     <h2>
-                        Data Visualization Exploration
                     </h2>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- LTV -->
-    <p>Delinquency By Different Cohorts of Borrowers</p>
-    <div class="altair" id="ltv"></div>
+    <div class="content" style="text-align:center">
+        <h2 style="text-align:center">
+            Exploring Fannie-Mae Data
+        </h2>
+    </div>
 
-    <script type="text/javascript">
-      var spec = "../static/buckets.json";
-      vegaEmbed('#ltv', spec, {"actions": false}).then(function(result) {
-    }).catch(console.error);
-    </script>
-    <!-- End LTV -->
+    <div class="grid-container-three">
+        <div>
+            <!-- LTV -->
+            <p>Delinquency By Different Cohorts of Borrowers</p>
+            <div class="altair" id="ltv"></div>
+            <script type="text/javascript">
+            var spec = "../static/buckets.json";
+            vegaEmbed('#ltv', spec, {"actions": false}).then(function(result) {
+            }).catch(console.error);
+            </script>
+            <!-- End LTV -->
+        </div>
 
+        <div>
+            <!-- Borrowers Scatter -->
+            <p style="text-align:center">More Borrowers Decreases the Risk of Delinquency</p>
+            <div class="altair" id="borrowers_scatter"></div>
+            <script type="text/javascript">
+            var spec = "../static/delinquency_num_borrowers.json";
+            vegaEmbed('#borrowers_scatter', spec, {"actions": false}).then(function(result) {
+            }).catch(console.error);
+            </script>
+            <!-- End scatter -->
+        </div>
+        
+        <div>
+             <!-- Refinance Chart -->
+            <p style="text-align:left">Refinance Opportunities Enticing for as Low as 0.2% Interest Rate Improvement</p>
+            <div class="altair" id="refi"></div>
 
-    <!-- Borrowers Scatter -->
-    <p>More Borrowers Decreases the Risk of Delinquency</p>
-    <div class="altair" id="borrowers_scatter"></div>
+            <script type="text/javascript">
+            var spec = "../static/refinance.json";
+            vegaEmbed('#refi', spec, {"actions": false}).then(function(result) {
+            }).catch(console.error);
+            </script>
+            <!-- End refinance chart -->
+        </div>
+    </div>
 
-    <script type="text/javascript">
-      var spec = "../static/delinquency_num_borrowers.json";
-      vegaEmbed('#borrowers_scatter', spec, {"actions": false}).then(function(result) {
-    }).catch(console.error);
-    </script>
-    <!-- End scatter -->
+    <div class="container">
+        <div>
+            <!-- Pie Chart -->
+            <p style="text-align:center">Patterns of Increasing/Decreasing Delinquency</p>
+            <div class="altair" id="pie"></div>
+            <script type="text/javascript">
+            var spec = "../static/delinquency_timeline.json";
+            vegaEmbed('#pie', spec, {"actions": false}).then(function(result) {
+            }).catch(console.error);
+            </script>
+            <!-- End pie chart -->
+        </div>
+    </div>
 
-    <!-- Pie Chart -->
-    <p>Patterns of Increasing/Decreasing Delinquency</p>
-    <div class="altair" id="pie"></div>
-
-    <script type="text/javascript">
-      var spec = "../static/delinquency_timeline.json";
-      vegaEmbed('#pie', spec, {"actions": false}).then(function(result) {
-    }).catch(console.error);
-    </script>
-    <!-- End pie chart -->
-
-    <!-- Refinance Chart -->
-    <p>Refinance Opportunities Enticing for as Low as 0.2% Interest Rate Improvement</p>
-    <div class="altair" id="refi"></div>
-
-    <script type="text/javascript">
-      var spec = "../static/refinance.json";
-      vegaEmbed('#refi', spec, {"actions": false}).then(function(result) {
-    }).catch(console.error);
-    </script>
-    <!-- End refinance chart -->
 
     <div class="footer">
         <div class="container">
