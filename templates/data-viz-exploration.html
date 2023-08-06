@@ -50,37 +50,16 @@
     </div>
 
     <!-- LTV -->
-    <p>Delinquency By Loan-to-Value Bins</p>
+    <p>Delinquency By Different Cohorts of Borrowers</p>
     <div class="altair" id="ltv"></div>
 
     <script type="text/javascript">
-      var spec = "../static/vega_ltv.json";
+      var spec = "../static/buckets.json";
       vegaEmbed('#ltv', spec, {"actions": false}).then(function(result) {
     }).catch(console.error);
     </script>
     <!-- End LTV -->
 
-    <!-- FICO -->
-    <p>Delinquency By FICO Bins</p>
-    <div class="altair" id="fico"></div>
-
-    <script type="text/javascript">
-      var spec = "../static/vega_fico.json";
-      vegaEmbed('#fico', spec, {"actions": false}).then(function(result) {
-    }).catch(console.error);
-    </script>
-    <!-- End FICO -->
-
-    <!-- DTI -->
-    <p>Delinquency By Debt-to-Income Ratio Bins</p>
-    <div class="altair" id="dti"></div>
-
-    <script type="text/javascript">
-      var spec = "../static/vega_dti.json";
-      vegaEmbed('#dti', spec, {"actions": false}).then(function(result) {
-    }).catch(console.error);
-    </script>
-    <!-- End LTV -->
 
     <!-- Borrowers Scatter -->
     <p>More Borrowers Decreases the Risk of Delinquency</p>
