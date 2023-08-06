@@ -56,37 +56,12 @@
 
     <div class="grid-container-three">
         <div>
-             <!-- LTV -->
-            <p style="text-align:center">Delinquency By Loan-to-Value Bins</p>
+            <!-- LTV -->
+            <p>Delinquency By Different Cohorts of Borrowers</p>
             <div class="altair" id="ltv"></div>
-
             <script type="text/javascript">
-            var spec = "../static/vega_ltv.json";
+            var spec = "../static/buckets.json";
             vegaEmbed('#ltv', spec, {"actions": false}).then(function(result) {
-            }).catch(console.error);
-            </script>
-            <!-- End LTV -->
-        </div>
-
-        <div>
-            <!-- FICO -->
-            <p style="text-align:center">Delinquency By FICO Bins</p>
-            <div class="altair" id="fico"></div>
-            <script type="text/javascript">
-            var spec = "../static/vega_fico.json";
-            vegaEmbed('#fico', spec, {"actions": false}).then(function(result) {
-            }).catch(console.error);
-            </script>
-            <!-- End FICO -->
-        </div>
-
-        <div>
-            <!-- DTI -->
-            <p style="text-align:center">Delinquency By Debt-to-Income Ratio Bins</p>
-            <div class="altair" id="dti"></div>
-            <script type="text/javascript">
-            var spec = "../static/vega_dti.json";
-            vegaEmbed('#dti', spec, {"actions": false}).then(function(result) {
             }).catch(console.error);
             </script>
             <!-- End LTV -->
@@ -104,7 +79,6 @@
             <!-- End scatter -->
         </div>
         
-
         <div>
              <!-- Refinance Chart -->
             <p style="text-align:left">Refinance Opportunities Enticing for as Low as 0.2% Interest Rate Improvement</p>
@@ -120,15 +94,17 @@
     </div>
 
     <div class="container">
-        <!-- Pie Chart -->
-        <p style="text-align:center">Patterns of Increasing/Decreasing Delinquency</p>
-        <div class="altair" id="pie"></div>
-        <script type="text/javascript">
-        var spec = "../static/delinquency_timeline.json";
-        vegaEmbed('#pie', spec, {"actions": false}).then(function(result) {
-        }).catch(console.error);
-        </script>
-        <!-- End pie chart -->
+        <div>
+            <!-- Pie Chart -->
+            <p style="text-align:center">Patterns of Increasing/Decreasing Delinquency</p>
+            <div class="altair" id="pie"></div>
+            <script type="text/javascript">
+            var spec = "../static/delinquency_timeline.json";
+            vegaEmbed('#pie', spec, {"actions": false}).then(function(result) {
+            }).catch(console.error);
+            </script>
+            <!-- End pie chart -->
+        </div>
     </div>
 
 
