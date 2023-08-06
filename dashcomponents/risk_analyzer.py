@@ -80,7 +80,7 @@ risk_app = \
                         ])
                     ])
                 ]),
-                html.Div([
+                html.Div(className="content",children=[
                     html.Iframe(
                         id='risk-chart',
                         style={'border-width': '0', 'width': '1500px', 'height': '600px'}
@@ -88,21 +88,6 @@ risk_app = \
                 ])
             ])
         ]),
-
-        # # RESULTS SECTION
-        # html.Div(className="banner row", children=[
-        #     html.Div(className="container", children=[
-        #         html.Div(className="content", children=[
-        #             html.Div(className='input-container', children=[
-        #                 html.Iframe(
-        #                     id='risk-chart',
-        #                     style={'border-width': '0', 'width': '100%', 'height': '100%'}
-        #                 )
-        #             ])
-        #         ])
-        #     ])
-        # ]),
-
         # FOOTER SECTION
         html.Div(className="footer row", children=[
             html.Div(className="container", children=[
@@ -128,13 +113,16 @@ Callbacks
      dash.dependencies.State('zipcodeshort', 'value')]
 )
 def update_chart(n_clicks, interest_rate, total_loan_amount, loan_to_value, fico_score, dti_ratio, zipcode):
-    print('callback fired')
-    dlqr = LoanDlqRisks(
-            float(interest_rate),
-            float(total_loan_amount),
-            float(loan_to_value),
-            float(fico_score),
-            float(dti_ratio),
-            zipcode
-        ).get_relative_stats(ref_table=df).generate_risk_summary(weight_params=weights)
-    return dlqr.final_chart.to_html()
+    if n_clicks > 0:
+        print('callback fired')
+        dlqr = LoanDlqRisks(
+                float(interest_rate),
+                float(total_loan_amount),
+                float(loan_to_value),
+                float(fico_score),
+                float(dti_ratio),
+                zipcode
+            ).get_relative_stats(ref_table=df).generate_risk_summary(weight_params=weights)
+        return dlqr.final_chart.to_html()
+    else:
+        return None

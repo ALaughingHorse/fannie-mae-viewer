@@ -1,6 +1,6 @@
 {
   "config": {
-    "view": {"continuousWidth": 400, "continuousHeight": 300},
+    "view": {"continuousWidth": 300, "continuousHeight": 300},
     "circle": {"size": 100}
   },
   "data": {"name": "data-3a94cbf5e187ded05006f876faa8aeca"},
