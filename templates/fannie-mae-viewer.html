@@ -1,99 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Fannie Mae Viewer</title>
+    <title>Risk Viewer</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
     
+    <style>
+  header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+</style>
+
 </head>
 <body>
 
     <!-- ----------------->
     <!-- HEADER SECTION -->
     <!-- ----------------->
-    <div class="header">
+
+    <header class="header">
         <div class="container">
             <div class="heading">            
                 <div class="logo">
                     <h1 title="Fannie Mae Viewer" ><a href="#home">Fannie Mae Viewer</a></h1>
                 </div>
                 <div class="menu">
-                    <ul>                        
+                    <ul>
+                        
                         <li><a href="/fannie-mae-viewer/riskanalyzer" title="Analyze">Analyze</a></li>
                         <li><a href="/fannie-mae-viewer/exploration" title="Explore">Explore</a></li>
+                        <li><a href="/fannie-mae-viewer/about" title="About">About Us</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
     <!-- ------------------->
     <!--END HEADER SECTION-->
     <!-- ------------------->
 
     <!-- ----------------->
-    <!-- BANNER SECTION -->
+    <!-- CONTENT SECTION -->
     <!-- ----------------->
-
-    <div class="banner">
-        <div class="container">
-            <div class="content">
-                <div class="content-left" id="home">
-                    <h2>
-                        Overview
-                    </h2>
-                    <p>
-                        The Fannie Mae Viewer is a web-based tool that provides insights into
-			residential mortgage performance for investors and anyone interested. It has
-			been prepared as part of a UC Berkeley DATASCI 209 Information Visualization class.
-                    </p>
-                    <p>
-			On the "Analyze" page, users will find an interactive tool to help gauge the risk
-			of a loan application based on historical residential mortgage data.
-                    </p>
-                    <p>
-			The "Explore" page has a variety of visualizations which highlight some trends identified
-			in the dataset.
-                    </p>
-                    
-                </div>
-
-                
-            </div>
-        </div>
+    <div class="content-main">
         
-        <div class="container">
-            <div class="content">
-                <div class="content-left" id="home">
-                    <h2>
-                        The Data
-                    </h2>
-                    <p>
-                    	The data used in the various visualizations is mortgage performance data
-			covering the last 10 years of conventional, 30-year mortgage loans guaranteed
-			by Fannie Mae (~33% of US mortgage market). Specifically, this project focuses on
-			the reference pool 1474. Fannie Mae provides this data through their
-			<a href="https://www.fanniemae.com/data-dynamics"><u>Data Dynamics tool</u></a>,
-		    	which is freely available to the public.
-                    </p>
-                </div>
+            <div class="content-inner">
+            <!-- -----SET 1------- -->
+            <div class="left txt">
+                <h1>Risk Analyzer</h1>
+                <p>
+                   Users will find an interactive tool to help gauge the risk of a loan application based on historical mortgage data.
+                   The tool considers factors such as interest rate, debt-to-income ratio, credit score, and loan amount to generate risk assessment.
+                   This tool will help investors identify the mortgage characteristics for high-risk borrowers. By investing in mortgages with lower risk borrowers, investors can get a better return on their investment.
+                </p>
+                <a href="/fannie-mae-viewer/riskanalyzer"><button type="submit" formaction="/fannie-mae-viewer/exploration">Analyze</button></a>
             </div>
-        </div>
+
+            <div class="right">
+                <img src="{{ url_for('static', filename='houses.jpeg') }}" alt="">
+            </div>
+            <!-- -----SET 2------- -->
+	 <div>
+        <div style="width: 100px; float: left"></div>
+<hr>
     </div>
+    <div>
+        <div style="width: 100px; float: left;clear:left;"></div>
+        <hr>
+    </div>
+            <div class="left">
+                <img src="{{ url_for('static', filename='visuals.jpeg') }}" alt="">
+            </div>
+
+            <div class="right txt">
+                <h1>Performance Charts</h1>
+                <p>
+                    The explore page has a variety of visualizations which highlights some trends identified in the dataset.
+                    Performance charts can be used to track the overall performance of the mortgage market.
+                </p>
+                <a href="/fannie-mae-viewer/exploration"><button type="submit" formaction="/fannie-mae-viewer/riskanalyzer">Explore</button></a>
+            </div>
+
+          
+        </div>
+
+
+    </div>
+
+    
 
 
     <!-- ------------------->
-    <!--END BANNER SECTION-->
+    <!--END CONTENT SECTION-->
     <!-- ------------------->
 
     <!-- ----------------->
     <!-- FOOTER SECTION -->
     <!-- ----------------->
 
-    <div class="footer">
+    <div class="footer" style="background-color:black;">
         <div class="container">
             <div class="footer-inner">
                 <p>Josh Fram • Andre Gigena • Marshal Ma • Sudhir Suvva</p>

@@ -26,6 +26,10 @@ def riskanalyzer():
 @app.route("/fannie-mae-viewer/exploration")
 def exploration():
     return render_template("data-viz-exploration.html")
+
+@app.route("/fannie-mae-viewer/about")
+def about():
+    return render_template("about.html")    
 		
 if __name__ == "__main__":
     app.run()

@@ -1,34 +1,19 @@
 body{
-    background-color: #253D69;
+    background-color: #36517c;
     margin: 0 auto;
-    margin-bottom: 5%;
 
 }
 .container{
     width: 1200px;
     margin: 0 auto;
 }
-h1, li, ul li, h2, a, label{
+h1, p, li, ul li, h2, a, label{
     text-decoration: none;
     color: #ffffff;
     margin: 0 auto;
     padding: 0;
     list-style: none;
     font-family: 'Lato', sans-serif !important;
-}
-
-p{
-    text-decoration: none;
-    color: #ffffff;
-    margin: 0 auto;
-    padding: 10px;
-    list-style: none;
-    font-family: 'Lato', sans-serif !important;
-}
-
-.altair{
-    margin: 0 auto;
-    padding-left: 40px;
 }
 
 /*------------------
@@ -38,15 +23,13 @@ p{
 .header{
     margin: 0 auto;
     width: 100%;
-    background-color: #8E799E;
-    padding: 0px 0px 10px 0px;
+    background-color: black;
+    padding: 0px 0px 50px 0px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
-    position: fixed;
-    z-index: 999;
 }
 .heading{
     position: relative;
-    padding: 10px 0px 10px 0px;
+    padding: 19px 0px 14px 0px;
 }
 
 .logo{
@@ -54,6 +37,7 @@ p{
     width: 50%;
     float: left;
     margin: 16px 0px;
+    text-align: left;
 }
 .logo h1 {
     font-size: 20px;
@@ -64,10 +48,9 @@ p{
 }
 
 .menu{
-    width: 50%;
+    width: 60%;
     float: right;
-    text-align: right;
-
+    text-align: center;
 }
 .menu li {
     display: inline;
@@ -120,17 +103,15 @@ a.explore:hover {
 }
 .content {
     position: relative;
-    margin: auto;
-    /* max-width: 800px; */
 }
 .content-left {
     position: relative;
-    width: 150%;
-    float: right;
+    width: 50%;
+    float: left;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
     /* padding: 133px 0px 0px 0px; */
-    padding: 50px 0px;
+    padding: 70px 0px;
     clear: both;
     overflow: hidden;
 }
@@ -139,7 +120,7 @@ a.explore:hover {
     text-align: left;
     font-size: 37px;
     width: 50%;
-    color: #ffffff;
+    color: #48b0e1;
     
     padding-bottom: 20px;
 }
@@ -149,7 +130,7 @@ a.explore:hover {
     text-align: left;
 }
 .content .btn {
-    background-color: #8EC296;
+    background-color: #48b0e1;
     outline: none;
     border: 2px solid #ffffff;
     border-radius: 18px;
@@ -186,7 +167,27 @@ a.explore:hover {
 /*----------------------
 ---END BANNER SECTION---
 ------------------------*/
+.content-inner {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.content-inner .left{
+    margin: 10%;
+    padding-top: 100px;
+}
 
+
+.content-inner .right{
+    float:right;
+    width: 50%;
+    padding: 0;
+    margin: 10%;
+}
+
+.content-main img {
+    width: 455px;
+    height: 375px;
+}
 
 /*------------------------------
 ---SECOND PAGE BANNER SECTION---
@@ -262,7 +263,6 @@ input:hover[type="submit"]{
     padding-top: 30px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin-top: 8%;
 }
 
 
@@ -270,18 +270,70 @@ input:hover[type="submit"]{
 --- END SECOND PAGE BANNER SECTION---
 ------------------------------------*/
 
+/*-----------------------------------
+--- NEW PAGE BANNER SECTION---
+------------------------------------*/
+.right.txt {
+    margin-top: 50%;
+    width: 80% !important;
+    float: none !important;
+}
+.left.txt p,.right.txt p {
+    margin: 20px 0px;
+}
+.left.txt button, .right.txt button {
+    background-color: #38becc;
+    border: none;
+    width: 100px;
+    padding: 7px;
+    color: #ffffff;
+    border-radius: 25px;
+}
+.left.txt button:hover, .right.txt button:hover {
+    background: #ffffff;
+    color: #38becc;
+    cursor: pointer;
+}
+.left.txt h1 {
+    color: #38becc;
+}
+.right.txt h1 {
+    color: #38becc;
+}
+
+/*------------------
+---ABOUT US SECTION---
+--------------------*/
+.about-content {
+    display: flex;
+    margin: 210px 0px;
+}
+.about-content .about-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-inner p {
+    text-align: center;
+}
+.about-inner h4 {
+    color: #ffffff;
+    font-size: 20px;
+}
+.fa-lightbulb-o:before, .fa-line-chart:before,.fa-edit:before, .fa-pencil-square-o:before,.fa-comments:before {
+    content: "\f0eb";
+    font-size: 60px;
+    color: #ffffff;
+}
+
+
 
 /*------------------
 ---FOOTER SECTION---
 --------------------*/
 .footer{
-    background-color: #8E799E;
+    background-color: #ffffff5a;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    position: absolute;
-    width: 100%;
-    bottom: 0px;
-    position: fixed;
-    z-index: 999;
 }
 
 .footer p {
@@ -324,3 +376,55 @@ input:hover[type="submit"]{
     /* margin: 0 auto; */
     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
   }
+  
+/*------------Mobile Phones*------------------*/    
+@media (max-width: 767px){
+    .container {
+        width: 688px;
+        margin: 0 auto;
+    }
+    .menu {
+        width: 40%;
+        float: right;
+        text-align: left;
+    }
+    .menu li {
+        display: inline;
+        padding: 0px 0px 0px 19px;
+        font-size: 17px;
+    }
+    ul {
+        padding: 0;
+        /* margin: 0; */
+    }
+    label {
+        float: left;
+        width: 80%;
+        font-size: 13px;
+    }
+    .input-container .btn {
+        left: 280px;
+        top: 327px;
+    }
+    .two h1 {
+        text-align: center;
+        font-size: 25px;
+    }
+}
+
+/*------------Galaxy fold*------------------/ 
+    /*Mobile*/
+    @media (max-width: 280px){
+        .header{
+            width: 246%;
+        }
+        .menu li {
+            display: inline;
+            padding: 0px 0px 0px 11px;
+            font-size: 17px;
+        }
+        .container {
+            width: 650px;
+            margin: 0 auto;
+        }
+    }
