@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Risk Viewer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+  header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+</style>
+
+</head>
+<body>
+
+    <!-- ----------------->
+    <!-- HEADER SECTION -->
+    <!-- ----------------->
+
+    <header class="header">
+        <div class="container">
+            <div class="heading">            
+                <div class="logo">
+                    <h1 title="Fannie Mae Viewer" ><a href="/fannie-mae-viewer/">Fannie Mae Viewer</a></h1>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/fannie-mae-viewer/riskanalyzer" title="Analyze">Analyze</a></li>
+                        <li><a href="/fannie-mae-viewer/exploration" title="Explore">Explore</a></li>
+                        <li><a href="/fannie-mae-viewer/about" title="About">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ------------------->
+    <!--END HEADER SECTION-->
+    <!-- ------------------->
+
+    <!-- ----------------->
+    <!-- CONTENT SECTION -->
+    <!-- ----------------->
+    <div class="about">
+        
+            <div class="about-content">
+                <div class="goal about-inner">
+                    <i class="fa fa-lightbulb-o w3-margin-bottom w3-jumbo w3-center"></i>
+                    <h4>Visualization Goals</h4>
+                    <p>A valuable tool for investors who wants</p><p> to get insights from historical residential mortgage data to make informed decisions in the housing market.</p>
+
+                </div>
+                <div class="action about-inner">
+                    <i class="fa fa-line-chart w3-margin-bottom w3-jumbo"></i>
+                    <h4>Audience</h4>
+                    <p>Pension Funds, Retail Investors, Hedge Funds.</p>
+
+                </div>
+                <div class="design about-inner">
+                    <i class="fa fa-edit w3-margin-bottom w3-jumbo"></i>
+                    <h4>Data Source</h4>
+                    <p>Performance data covering the last 10 years of performance data of conventional</p><p> 30 year mortgage loans guaranteed by Fannie Mae (~33% of US mortgage market).</p>
+
+                </div>
+                <div class="takeaways about-inner">
+                    <i class="fa fa-comments w3-margin-bottom w3-jumbo"></i>
+                    <h4>Takeaways</h4>
+                    <p>We hope to provide more interactive charts</p><p> where user can pick various mortgage parameters and view the performance</p>
+
+                </div>
+
+            
+
+        </div>
+
+        
+           
+
+          
+      
+
+
+    </div>
+
+    
+
+
+    <!-- ------------------->
+    <!--END CONTENT SECTION-->
+    <!-- ------------------->
+
+    <!-- ----------------->
+    <!-- FOOTER SECTION -->
+    <!-- ----------------->
+
+    <div class="footer" style="background-color:black;">
+        <div class="container">
+            <div class="footer-inner">
+                <p>Josh Fram • Andre Gigena • Marshal Ma • Sudhir Suvva</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
