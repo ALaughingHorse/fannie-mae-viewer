@@ -34,7 +34,9 @@ risk_app = \
                     html.Div(className="menu", children=[
                         html.Ul(children=[
                             html.Li(html.A("Analyze", href="#", title="Analyze")),
-                            html.Li(html.A("Explore", href="/fannie-mae-viewer/exploration", title="Explore"))
+                            html.Li(html.A("Explore", href="/fannie-mae-viewer/exploration", title="Explore")),
+                            html.Li(html.A("About Us", href="/fannie-mae-viewer/about", title="About"))
+
                         ])
                     ])
                 ])
@@ -89,7 +91,7 @@ risk_app = \
             ])
         ]),
         # FOOTER SECTION
-        html.Div(className="footer row", children=[
+        html.Div(className="footer", style={'background-color':'black'},children=[
             html.Div(className="container", children=[
                 html.Div(className="footer-inner", children=[
                     html.P("Josh Fram • Andre Gigena • Marshal Ma • Sudhir Suvva")
