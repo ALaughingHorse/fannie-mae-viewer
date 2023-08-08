@@ -1,0 +1,454 @@
+{
+  "config": {"view": {"continuousWidth": 400, "continuousHeight": 300}},
+  "data": {
+    "url": "https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/us-10m.json",
+    "format": {"feature": "states", "type": "topojson"}
+  },
+  "mark": "geoshape",
+  "encoding": {
+    "color": {"field": "total_count", "type": "quantitative"},
+    "fill": {"field": "total_count", "type": "quantitative"},
+    "tooltip": {"field": "total_count", "type": "quantitative"}
+  },
+  "height": 400,
+  "projection": {"type": "albersUsa"},
+  "transform": [
+    {
+      "lookup": "id",
+      "from": {
+        "data": {"name": "data-b13c40057e69ce42285b9e5d95927d79"},
+        "key": "id",
+        "fields": [
+          "Property State",
+          "total_count",
+          "state",
+          "latitude",
+          "longitude",
+          "id"
+        ]
+      }
+    }
+  ],
+  "width": 600,
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json",
+  "datasets": {
+    "data-b13c40057e69ce42285b9e5d95927d79": [
+      {
+        "Property State": "AK",
+        "total_count": 3922,
+        "state": "AK",
+        "latitude": 63.588753,
+        "longitude": -154.493062,
+        "id": 2
+      },
+      {
+        "Property State": "AL",
+        "total_count": 36565,
+        "state": "AL",
+        "latitude": 32.318231,
+        "longitude": -86.902298,
+        "id": 1
+      },
+      {
+        "Property State": "AR",
+        "total_count": 18354,
+        "state": "AR",
+        "latitude": 35.20105,
+        "longitude": -91.831833,
+        "id": 5
+      },
+      {
+        "Property State": "AZ",
+        "total_count": 122726,
+        "state": "AZ",
+        "latitude": 34.048928,
+        "longitude": -111.093731,
+        "id": 4
+      },
+      {
+        "Property State": "CA",
+        "total_count": 276862,
+        "state": "CA",
+        "latitude": 36.778261,
+        "longitude": -119.417932,
+        "id": 6
+      },
+      {
+        "Property State": "CO",
+        "total_count": 95963,
+        "state": "CO",
+        "latitude": 39.550051,
+        "longitude": -105.782067,
+        "id": 8
+      },
+      {
+        "Property State": "CT",
+        "total_count": 20721,
+        "state": "CT",
+        "latitude": 41.603221,
+        "longitude": -73.087749,
+        "id": 9
+      },
+      {
+        "Property State": "DC",
+        "total_count": 5558,
+        "state": "DC",
+        "latitude": 38.905985,
+        "longitude": -77.033418,
+        "id": 11
+      },
+      {
+        "Property State": "DE",
+        "total_count": 8423,
+        "state": "DE",
+        "latitude": 38.910832,
+        "longitude": -75.52767,
+        "id": 10
+      },
+      {
+        "Property State": "FL",
+        "total_count": 146400,
+        "state": "FL",
+        "latitude": 27.664827,
+        "longitude": -81.515754,
+        "id": 12
+      },
+      {
+        "Property State": "GA",
+        "total_count": 88029,
+        "state": "GA",
+        "latitude": 32.157435,
+        "longitude": -82.907123,
+        "id": 13
+      },
+      {
+        "Property State": "HI",
+        "total_count": 5026,
+        "state": "HI",
+        "latitude": 19.898682,
+        "longitude": -155.665857,
+        "id": 15
+      },
+      {
+        "Property State": "IA",
+        "total_count": 33406,
+        "state": "IA",
+        "latitude": 41.878003,
+        "longitude": -93.097702,
+        "id": 19
+      },
+      {
+        "Property State": "ID",
+        "total_count": 35943,
+        "state": "ID",
+        "latitude": 44.068202,
+        "longitude": -114.742041,
+        "id": 16
+      },
+      {
+        "Property State": "IL",
+        "total_count": 89384,
+        "state": "IL",
+        "latitude": 40.633125,
+        "longitude": -89.398528,
+        "id": 17
+      },
+      {
+        "Property State": "IN",
+        "total_count": 56454,
+        "state": "IN",
+        "latitude": 40.551217,
+        "longitude": -85.602364,
+        "id": 18
+      },
+      {
+        "Property State": "KS",
+        "total_count": 21425,
+        "state": "KS",
+        "latitude": 39.011902,
+        "longitude": -98.484246,
+        "id": 20
+      },
+      {
+        "Property State": "KY",
+        "total_count": 27144,
+        "state": "KY",
+        "latitude": 37.839333,
+        "longitude": -84.270018,
+        "id": 21
+      },
+      {
+        "Property State": "LA",
+        "total_count": 25247,
+        "state": "LA",
+        "latitude": 31.244823,
+        "longitude": -92.145024,
+        "id": 22
+      },
+      {
+        "Property State": "MA",
+        "total_count": 60079,
+        "state": "MA",
+        "latitude": 42.407211,
+        "longitude": -71.382437,
+        "id": 25
+      },
+      {
+        "Property State": "MD",
+        "total_count": 52312,
+        "state": "MD",
+        "latitude": 39.045755,
+        "longitude": -76.641271,
+        "id": 24
+      },
+      {
+        "Property State": "ME",
+        "total_count": 6841,
+        "state": "ME",
+        "latitude": 45.253783,
+        "longitude": -69.445469,
+        "id": 23
+      },
+      {
+        "Property State": "MI",
+        "total_count": 105321,
+        "state": "MI",
+        "latitude": 44.314844,
+        "longitude": -85.602364,
+        "id": 26
+      },
+      {
+        "Property State": "MN",
+        "total_count": 75830,
+        "state": "MN",
+        "latitude": 46.729553,
+        "longitude": -94.6859,
+        "id": 27
+      },
+      {
+        "Property State": "MO",
+        "total_count": 54589,
+        "state": "MO",
+        "latitude": 37.964253,
+        "longitude": -91.831833,
+        "id": 29
+      },
+      {
+        "Property State": "MS",
+        "total_count": 12291,
+        "state": "MS",
+        "latitude": 32.354668,
+        "longitude": -89.398528,
+        "id": 28
+      },
+      {
+        "Property State": "MT",
+        "total_count": 11407,
+        "state": "MT",
+        "latitude": 46.879682,
+        "longitude": -110.362566,
+        "id": 30
+      },
+      {
+        "Property State": "NC",
+        "total_count": 93886,
+        "state": "NC",
+        "latitude": 35.759573,
+        "longitude": -79.0193,
+        "id": 37
+      },
+      {
+        "Property State": "ND",
+        "total_count": 6375,
+        "state": "ND",
+        "latitude": 47.551493,
+        "longitude": -101.002012,
+        "id": 38
+      },
+      {
+        "Property State": "NE",
+        "total_count": 24539,
+        "state": "NE",
+        "latitude": 41.492537,
+        "longitude": -99.901813,
+        "id": 31
+      },
+      {
+        "Property State": "NH",
+        "total_count": 14679,
+        "state": "NH",
+        "latitude": 43.193852,
+        "longitude": -71.572395,
+        "id": 33
+      },
+      {
+        "Property State": "NJ",
+        "total_count": 53212,
+        "state": "NJ",
+        "latitude": 40.058324,
+        "longitude": -74.405661,
+        "id": 34
+      },
+      {
+        "Property State": "NM",
+        "total_count": 13772,
+        "state": "NM",
+        "latitude": 34.97273,
+        "longitude": -105.032363,
+        "id": 35
+      },
+      {
+        "Property State": "NV",
+        "total_count": 46684,
+        "state": "NV",
+        "latitude": 38.80261,
+        "longitude": -116.419389,
+        "id": 32
+      },
+      {
+        "Property State": "NY",
+        "total_count": 42170,
+        "state": "NY",
+        "latitude": 43.299428,
+        "longitude": -74.217933,
+        "id": 36
+      },
+      {
+        "Property State": "OH",
+        "total_count": 81837,
+        "state": "OH",
+        "latitude": 40.417287,
+        "longitude": -82.907123,
+        "id": 39
+      },
+      {
+        "Property State": "OK",
+        "total_count": 22577,
+        "state": "OK",
+        "latitude": 35.007752,
+        "longitude": -97.092877,
+        "id": 40
+      },
+      {
+        "Property State": "OR",
+        "total_count": 47856,
+        "state": "OR",
+        "latitude": 43.804133,
+        "longitude": -120.554201,
+        "id": 41
+      },
+      {
+        "Property State": "PA",
+        "total_count": 68290,
+        "state": "PA",
+        "latitude": 41.203322,
+        "longitude": -77.194525,
+        "id": 42
+      },
+      {
+        "Property State": "PR",
+        "total_count": 388,
+        "state": "PR",
+        "latitude": 18.220833,
+        "longitude": -66.590149,
+        "id": 72
+      },
+      {
+        "Property State": "RI",
+        "total_count": 5665,
+        "state": "RI",
+        "latitude": 41.580095,
+        "longitude": -71.477429,
+        "id": 44
+      },
+      {
+        "Property State": "SC",
+        "total_count": 50170,
+        "state": "SC",
+        "latitude": 33.836081,
+        "longitude": -81.163725,
+        "id": 45
+      },
+      {
+        "Property State": "SD",
+        "total_count": 10998,
+        "state": "SD",
+        "latitude": 43.969515,
+        "longitude": -99.901813,
+        "id": 46
+      },
+      {
+        "Property State": "TN",
+        "total_count": 58430,
+        "state": "TN",
+        "latitude": 35.517491,
+        "longitude": -86.580447,
+        "id": 47
+      },
+      {
+        "Property State": "TX",
+        "total_count": 172915,
+        "state": "TX",
+        "latitude": 31.968599,
+        "longitude": -99.901813,
+        "id": 48
+      },
+      {
+        "Property State": "UT",
+        "total_count": 71528,
+        "state": "UT",
+        "latitude": 39.32098,
+        "longitude": -111.093731,
+        "id": 49
+      },
+      {
+        "Property State": "VA",
+        "total_count": 76644,
+        "state": "VA",
+        "latitude": 37.431573,
+        "longitude": -78.656894,
+        "id": 51
+      },
+      {
+        "Property State": "VT",
+        "total_count": 2465,
+        "state": "VT",
+        "latitude": 44.558803,
+        "longitude": -72.577841,
+        "id": 50
+      },
+      {
+        "Property State": "WA",
+        "total_count": 107432,
+        "state": "WA",
+        "latitude": 47.751074,
+        "longitude": -120.740139,
+        "id": 53
+      },
+      {
+        "Property State": "WI",
+        "total_count": 72000,
+        "state": "WI",
+        "latitude": 43.78444,
+        "longitude": -88.787868,
+        "id": 55
+      },
+      {
+        "Property State": "WV",
+        "total_count": 5212,
+        "state": "WV",
+        "latitude": 38.597626,
+        "longitude": -80.454903,
+        "id": 54
+      },
+      {
+        "Property State": "WY",
+        "total_count": 6983,
+        "state": "WY",
+        "latitude": 43.075968,
+        "longitude": -107.290284,
+        "id": 56
+      }
+    ]
+  }
+}

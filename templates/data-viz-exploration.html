@@ -98,6 +98,20 @@
             <!-- End pie chart -->
         </div>
     </div>
+	<br><br>
+    <div class="container">
+        <div>
+            <!-- Pie Chart -->
+            <p style="text-align:left">Residential Mortgage Count by State</p>
+            <div class="altair" id="mcount"></div>
+            <script type="text/javascript">
+            var spec = "../static/vega_count_by_state.json";
+            vegaEmbed('#mcount', spec, {"actions": false}).then(function(result) {
+            }).catch(console.error);
+            </script>
+            <!-- End pie chart -->
+        </div>
+    </div>
 
     <div class="banner">
         <div class="container">
