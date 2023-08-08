@@ -8,7 +8,10 @@
   "encoding": {
     "color": {"field": "total_count", "type": "quantitative"},
     "fill": {"field": "total_count", "type": "quantitative"},
-    "tooltip": {"field": "total_count", "type": "quantitative"}
+    "tooltip": [
+      {"field": "state", "type": "nominal"},
+      {"field": "total_count", "type": "quantitative"}
+    ]
   },
   "height": 400,
   "projection": {"type": "albersUsa"},
